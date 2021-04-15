@@ -1,0 +1,166 @@
+@charset "UTF-8";
+.block-button {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /******** HOVER 1 кнопка ******************/
+  /*****************************************/
+  /******** HOVER 2 кнопка ******************/
+  /*****************************************/
+  /******** HOVER 3 кнопка ******************/
+  /*****************************************/
+  /******** HOVER 4 кнопка ******************/
+  /*****************************************/
+}
+
+.block-button button {
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  width: 10rem;
+  font-size: 1.4rem;
+  line-height: 140%;
+  color: #fff;
+  display: block;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.block-button .q {
+  background-color: #fb4b1f;
+  position: relative;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  z-index: 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.block-button .q:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #5d53c6;
+  z-index: -1;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.block-button .q:focus:before, .block-button .q:hover:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.block-button .w {
+  color: violet;
+  background-color: transparent;
+  /* ПРОЗРАЧНОСТЬ ОБЯЗАТЕЛЬНА ДЛЯ ДАННОЙ АНИМАЦИИ*/
+  -webkit-transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  position: relative;
+}
+
+.block-button .w:before, .block-button .w:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: inherit;
+  transition: inherit;
+  z-index: -1;
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+
+.block-button .w:before {
+  right: 0;
+  border-top: 1px solid green;
+  border-bottom: 1px solid green;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.block-button .w:after {
+  left: 0;
+  background: blue;
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.block-button .w:hover {
+  color: #fdf17f;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.block-button .w:hover:before, .block-button .w:hover:after {
+  width: 100%;
+}
+
+.block-button .e {
+  color: violet;
+  background-color: transparent;
+  /* ПРОЗРАЧНОСТЬ ОБЯЗАТЕЛЬНА ДЛЯ ДАННОЙ АНИМАЦИИ*/
+  -webkit-transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  position: relative;
+}
+
+.block-button .e:before, .block-button .e:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: inherit;
+  transition: inherit;
+  z-index: -1;
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+
+.block-button .e:before {
+  right: 0;
+  left: 50%;
+  border-top: 1px solid green;
+  border-bottom: 1px solid green;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.block-button .e:after {
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background: blue;
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.block-button .e:hover {
+  color: #fdf17f;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.block-button .e:hover:before {
+  left: 0;
+  width: 100%;
+}
+
+.block-button .e:hover:after {
+  top: 0;
+  height: 100%;
+}
