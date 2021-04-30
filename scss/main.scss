@@ -133,6 +133,378 @@
     /*****************************************/
 
     /******** HOVER 4 кнопка ******************/
+    .r {
+        cursor: pointer;
+        text-align: center;
+        background: #eee;
+        // код ниже обязателен
+        z-index: 0;
+        position: relative;
+        transition: 0.4s 0.4s; // обязательно для анимации
+        &:hover {
+            background: rgba(226, 188, 18, 0.466);
+            color: #fff;
+            &:before {
+                border-top: 1px solid rgba(0, 0, 0, 0.8);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+                width: 100%;
+                height: 90%;
+                transition: 0.4s;
+            }
+            &:after {
+                border-left: 1px solid rgba(0, 0, 0, 0.8);
+                border-right: 1px solid rgba(0, 0, 0, 0.8);
+                height: 90%;
+                width: 98%;
+                transition: 0.4s;
+            }
+        }
 
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border: 1px solid rgba(0, 0, 0, 0);
+            position: absolute;
+            top: -0.1rem;
+            right: 0;
+            bottom: 0;
+            left: -1px;
+            margin: auto;
+            transition: 0.4s 0.4s;
+            z-index: 1;
+        }
+        &:before {
+            height: 100%;
+        }
+        &:after {
+            width: 100%;
+            left: 0px;
+        }
+    }
+    /*****************************************/
+    /******** HOVER 5 кнопка ******************/
+    // .t {
+    // }
+    /*****************************************/
+    /******** HOVER 6 кнопка ******************/
+    .y {
+        cursor: pointer;
+        text-align: center;
+        background: rgb(14, 237, 22);
+        // код ниже обязателен
+        z-index: 0;
+        position: relative;
+        transition: 0.4s 0.4s; // обязательно для анимации
+        &:hover {
+            background-color: transparent;
+            color: #fff;
+            &:after {
+                background-color: violet;
+                height: 100%;
+                width: 100%;
+                transition: 0.4s;
+                z-index: -1;
+            }
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 0%;
+            position: absolute;
+            top: -0.1rem;
+            right: 0;
+            bottom: 0;
+            left: -1px;
+            margin: auto;
+            transition: 0.4s 0.4s;
+            z-index: -1;
+        }
+    }
+    /*****************************************/
+    /******** HOVER 7 кнопка ******************/
+    .u {
+        cursor: pointer;
+        background-color: transparent;
+        z-index: 0;
+        box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.34);
+        position: relative;
+
+        color: #000;
+        display: block;
+        text-transform: uppercase;
+        text-align: center;
+        // transform: scaleX(0.6);
+        // letter-spacing: 3px;
+        transform-origin: center left;
+        transition: color 0.3s ease;
+        position: relative;
+        z-index: 1;
+
+        &:before,
+        &:after {
+            content: "";
+            background: transparent;
+            height: 50%;
+            width: 0;
+            position: absolute;
+            transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            z-index: -1;
+            background-color: #000;
+            transition: all 0.3s ease;
+        }
+        &:before {
+            top: 0;
+            left: 0;
+            right: auto;
+        }
+        &:after {
+            bottom: 0;
+            right: 0;
+            left: auto;
+        }
+        &:hover {
+            &:before {
+                width: 100%;
+                right: 0;
+                left: auto;
+                background-color: #000;
+                transition: all 0.3s;
+            }
+            &:after {
+                width: 100%;
+                left: 0;
+                right: auto;
+                background-color: #000;
+
+                transition: all 0.3s;
+            }
+
+            color: #fff;
+        }
+        /*****************************************/
+    }
+}
+
+/*****************************************/
+
+/******** ССЫЛКИ ******************/
+.link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2rem;
+    h3 {
+        width: 100%;
+        text-align: center;
+    }
+    a {
+        /*html код такой <a> <span> 1 </span> </a>  спан обязателен */
+        cursor: pointer;
+        display: inline-block;
+        margin: 5px;
+        padding: 1rem 2.5rem;
+        text-align: center;
+        background: #eee;
+
+        // код ниже обязателен
+        position: relative;
+        transition: 0.4s 0.4s; // обязательно для анимации
+    }
+    /******** HOVER 1 ссылка ******************/
+    .link-1 {
+        /*html код такой <a> <span>  </span> </a>  спан обязателен */
+        &:hover {
+            background: #000;
+            color: #fff;
+            span:before {
+                border-top: 1px solid rgba(0, 0, 0, 0.8);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+                width: 100%;
+                transition: 0.4s;
+            }
+            span:after {
+                border-left: 1px solid rgba(0, 0, 0, 0.8);
+                border-right: 1px solid rgba(0, 0, 0, 0.8);
+                height: 100%;
+                transition: 0.4s;
+            }
+        }
+        span {
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border: 1px solid rgba(0, 0, 0, 0);
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: -1px;
+                margin: auto;
+                transition: 0.4s 0.4s;
+            }
+            &:before {
+                height: 100%;
+            }
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+    /*****************************************/
+    /******** HOVER 2 ссылка ******************/
+    .link-2 {
+        text-transform: uppercase;
+        position: relative;
+        padding: 1rem 4rem;
+        -webkit-transition: background 0.3s ease-in 0.2s;
+        transition: background 0.3s ease-in 0.2s;
+        &:after,
+        &:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 100%;
+            background: #c8a755;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+        &:before {
+            opacity: 0;
+            bottom: 50%;
+        }
+        &:hover {
+            background: rgba(0, 0, 0, 0.2);
+            -webkit-transition: background 0.3s ease-in 0.2s;
+            transition: background 0.3s ease-in 0.2s;
+            &:before {
+                bottom: 100%;
+                opacity: 1;
+            }
+        }
+    }
+    /*****************************************/
+    /******** HOVER 3 ссылка ******************/
+    .link-3 {
+        /*html код такой <a> <span>  </span> </a>  спан обязателен */
+        cursor: pointer;
+        background-color: #000;
+        z-index: 0;
+        box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.34);
+        span {
+            color: #fff;
+            display: block;
+            text-transform: uppercase;
+            transform: scaleX(0.6);
+            // letter-spacing: 3px;
+            transform-origin: center left;
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            background: #fff;
+            height: 50%;
+            width: 0;
+            position: absolute;
+            transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        }
+        &:before {
+            top: 0;
+            left: 0;
+            right: auto;
+        }
+        &:after {
+            bottom: 0;
+            right: 0;
+            left: auto;
+        }
+        &:hover {
+            &:before {
+                width: 100%;
+                right: 0;
+                left: auto;
+            }
+            &:after {
+                width: 100%;
+                left: 0;
+                right: auto;
+            }
+            span {
+                color: #000;
+            }
+        }
+        /*****************************************/
+    }
+    /******** HOVER 4 ссылка ******************/
+    .link-4 {
+        color: white;
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
+        background-color: transparent;
+        padding: 1rem 2rem;
+        perspective: 280px;
+        position: relative;
+        z-index: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: black;
+            // padding: 20px 50px;
+            left: 0;
+            top: 0;
+            transition: 0.4s all ease;
+            transform-origin: 50% 0;
+            transform: rotateX(0deg);
+            transform-style: preserve-3d;
+            z-index: -1;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 0.5rem 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fff;
+            transition: 0.8s all ease;
+            transform-origin: 50% 0;
+            transform: translate3d(0px, 100%, 0) rotateX(-90deg);
+            z-index: -1;
+        }
+
+        &:hover {
+            &::before {
+                background: #555;
+                transform: translate3d(0px, 0px, -60px) rotateX(90deg);
+            }
+            &::after {
+                width: 100%;
+                height: 100%;
+                background: #ff5e9f;
+                transform: rotateX(0deg);
+            }
+        }
+    }
     /*****************************************/
 }
+/*****************************************/

@@ -16,6 +16,11 @@
   /*****************************************/
   /******** HOVER 4 кнопка ******************/
   /*****************************************/
+  /******** HOVER 5 кнопка ******************/
+  /*****************************************/
+  /******** HOVER 6 кнопка ******************/
+  /*****************************************/
+  /******** HOVER 7 кнопка ******************/
 }
 
 .block-button button {
@@ -164,3 +169,424 @@
   top: 0;
   height: 100%;
 }
+
+.block-button .r {
+  cursor: pointer;
+  text-align: center;
+  background: #eee;
+  z-index: 0;
+  position: relative;
+  -webkit-transition: 0.4s 0.4s;
+  transition: 0.4s 0.4s;
+}
+
+.block-button .r:hover {
+  background: rgba(226, 188, 18, 0.466);
+  color: #fff;
+}
+
+.block-button .r:hover:before {
+  border-top: 1px solid rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 90%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.block-button .r:hover:after {
+  border-left: 1px solid rgba(0, 0, 0, 0.8);
+  border-right: 1px solid rgba(0, 0, 0, 0.8);
+  height: 90%;
+  width: 98%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.block-button .r:before, .block-button .r:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: 1px solid rgba(0, 0, 0, 0);
+  position: absolute;
+  top: -0.1rem;
+  right: 0;
+  bottom: 0;
+  left: -1px;
+  margin: auto;
+  -webkit-transition: 0.4s 0.4s;
+  transition: 0.4s 0.4s;
+  z-index: 1;
+}
+
+.block-button .r:before {
+  height: 100%;
+}
+
+.block-button .r:after {
+  width: 100%;
+  left: 0px;
+}
+
+.block-button .y {
+  cursor: pointer;
+  text-align: center;
+  background: #0eed16;
+  z-index: 0;
+  position: relative;
+  -webkit-transition: 0.4s 0.4s;
+  transition: 0.4s 0.4s;
+}
+
+.block-button .y:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.block-button .y:hover:after {
+  background-color: violet;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: -1;
+}
+
+.block-button .y:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  top: -0.1rem;
+  right: 0;
+  bottom: 0;
+  left: -1px;
+  margin: auto;
+  -webkit-transition: 0.4s 0.4s;
+  transition: 0.4s 0.4s;
+  z-index: -1;
+}
+
+.block-button .u {
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 0;
+  -webkit-box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.34);
+          box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.34);
+  position: relative;
+  color: #000;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+  /*****************************************/
+}
+
+.block-button .u:before, .block-button .u:after {
+  content: "";
+  background: transparent;
+  height: 50%;
+  width: 0;
+  position: absolute;
+  -webkit-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: -1;
+  background-color: #000;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.block-button .u:before {
+  top: 0;
+  left: 0;
+  right: auto;
+}
+
+.block-button .u:after {
+  bottom: 0;
+  right: 0;
+  left: auto;
+}
+
+.block-button .u:hover {
+  color: #fff;
+}
+
+.block-button .u:hover:before {
+  width: 100%;
+  right: 0;
+  left: auto;
+  background-color: #000;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.block-button .u:hover:after {
+  width: 100%;
+  left: 0;
+  right: auto;
+  background-color: #000;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/*****************************************/
+/******** ССЫЛКИ ******************/
+.link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 2rem;
+  /******** HOVER 1 ссылка ******************/
+  /*****************************************/
+  /******** HOVER 2 ссылка ******************/
+  /*****************************************/
+  /******** HOVER 3 ссылка ******************/
+  /******** HOVER 4 ссылка ******************/
+  /*****************************************/
+}
+
+.link h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.link a {
+  /*html код такой <a> <span> 1 </span> </a>  спан обязателен */
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  padding: 1rem 2.5rem;
+  text-align: center;
+  background: #eee;
+  position: relative;
+  -webkit-transition: 0.4s 0.4s;
+  transition: 0.4s 0.4s;
+}
+
+.link .link-1 {
+  /*html код такой <a> <span>  </span> </a>  спан обязателен */
+}
+
+.link .link-1:hover {
+  background: #000;
+  color: #fff;
+}
+
+.link .link-1:hover span:before {
+  border-top: 1px solid rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  width: 100%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.link .link-1:hover span:after {
+  border-left: 1px solid rgba(0, 0, 0, 0.8);
+  border-right: 1px solid rgba(0, 0, 0, 0.8);
+  height: 100%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.link .link-1 span:before, .link .link-1 span:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: 1px solid rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -1px;
+  margin: auto;
+  -webkit-transition: 0.4s 0.4s;
+  transition: 0.4s 0.4s;
+}
+
+.link .link-1 span:before {
+  height: 100%;
+}
+
+.link .link-1 span:after {
+  width: 100%;
+}
+
+.link .link-2 {
+  text-transform: uppercase;
+  position: relative;
+  padding: 1rem 4rem;
+  -webkit-transition: background 0.3s ease-in 0.2s;
+  transition: background 0.3s ease-in 0.2s;
+}
+
+.link .link-2:after, .link .link-2:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #c8a755;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.link .link-2:before {
+  opacity: 0;
+  bottom: 50%;
+}
+
+.link .link-2:hover {
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-transition: background 0.3s ease-in 0.2s;
+  transition: background 0.3s ease-in 0.2s;
+}
+
+.link .link-2:hover:before {
+  bottom: 100%;
+  opacity: 1;
+}
+
+.link .link-3 {
+  /*html код такой <a> <span>  </span> </a>  спан обязателен */
+  cursor: pointer;
+  background-color: #000;
+  z-index: 0;
+  -webkit-box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.34);
+          box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.34);
+  /*****************************************/
+}
+
+.link .link-3 span {
+  color: #fff;
+  display: block;
+  text-transform: uppercase;
+  -webkit-transform: scaleX(0.6);
+          transform: scaleX(0.6);
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.link .link-3:before, .link .link-3:after {
+  content: "";
+  background: #fff;
+  height: 50%;
+  width: 0;
+  position: absolute;
+  -webkit-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.link .link-3:before {
+  top: 0;
+  left: 0;
+  right: auto;
+}
+
+.link .link-3:after {
+  bottom: 0;
+  right: 0;
+  left: auto;
+}
+
+.link .link-3:hover:before {
+  width: 100%;
+  right: 0;
+  left: auto;
+}
+
+.link .link-3:hover:after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.link .link-3:hover span {
+  color: #000;
+}
+
+.link .link-4 {
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  -webkit-perspective: 280px;
+          perspective: 280px;
+  position: relative;
+  z-index: 0;
+}
+
+.link .link-4::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: black;
+  left: 0;
+  top: 0;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.link .link-4::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  -webkit-transition: 0.8s all ease;
+  transition: 0.8s all ease;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-transform: translate3d(0px, 100%, 0) rotateX(-90deg);
+          transform: translate3d(0px, 100%, 0) rotateX(-90deg);
+  z-index: -1;
+}
+
+.link .link-4:hover::before {
+  background: #555;
+  -webkit-transform: translate3d(0px, 0px, -60px) rotateX(90deg);
+          transform: translate3d(0px, 0px, -60px) rotateX(90deg);
+}
+
+.link .link-4:hover::after {
+  width: 100%;
+  height: 100%;
+  background: #ff5e9f;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+
+/*****************************************/
